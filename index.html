@@ -16,15 +16,15 @@
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiY2xldmVsYW5kLW1ldHJvcGFya3MiLCJhIjoiWHRKaDhuRSJ9.FGqNSOHwiCr2dmTH2JTMAA';
-var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([-81.695709, 41.45], 10);
+var map = L.mapbox.map('map', 'mapbox.outdoors')
+    .setView([-81.695, 41.45], 10);
 
 // As with any other AJAX request, this technique is subject to the Same Origin Policy:
 // http://en.wikipedia.org/wiki/Same_origin_policy
 // So the CSV file must be on the same domain as the Javascript, or the server
 // delivering it should support CORS.
 var featureLayer = L.mapbox.featureLayer()
-    .loadURL('test.geojson')
+    .loadURL('closures.geojson')
     .addTo(map);
 </script>
 </body>
